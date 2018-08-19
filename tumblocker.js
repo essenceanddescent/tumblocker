@@ -52,7 +52,7 @@ function tumblocker_run(config) {
   function check_loading() {
     setTimeout(function() {
       var current_state =  document.its_running ? document.its_running.state() : '';
-      var reload_text = '<h1>This page requires AJAX to run.  Turn on AJAX and reload.  Thanks.</h1>';
+      var reload_text = '<h1>This page requires AJAX to run.  Turn on AJAX and reload.  Thanks.</h1><img src="'+config['block_tracker_img']+'" >';
       
       if(current_state == 'pending') {
         if (!check_count) {
